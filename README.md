@@ -5,13 +5,15 @@ Applicazione web fatta con Spring framework(Security, MVC, SpringBoot, JPA)
 Clonare progetto:
 
 
-
+```
 git clone https://github.com/Mattia97-pappa/crm.git
 cd crm
-
+```
 
 
 Per accedere creare la tabella in questione per accedere come operatore: 
+
+```
 CREATE TABLE `operatore` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) DEFAULT NULL,
@@ -21,8 +23,13 @@ CREATE TABLE `operatore` (
   `ruolo` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+```
 
 E la tabella cliente per i clienti:
+
+
+
+```
 CREATE TABLE `cliente` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) DEFAULT NULL,
@@ -39,12 +46,14 @@ CREATE TABLE `cliente` (
   KEY `operatore_id` (`operatoreid`),
   CONSTRAINT `cliente_ibfk_1` FOREIGN KEY (`operatoreid`) REFERENCES `operatore` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
-
+```
 
 
 
 Sistemare anche le application.properties (ho utilizzato mariadb come database)
 
+
+```
 # DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
 spring.datasource.url=jdbc:mariadb://localhost:3306/crm
 spring.datasource.username=root
@@ -62,3 +71,4 @@ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.Ph
 
 logging.level.org.hibernate.SQL=DEBUG
 logging.level.org.hibernate.type=TRACE
+```
