@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+.message {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.message.error {
+    background-color: #ffe0e0;
+    color: #c00;
+}
+
+.message.logout {
+    background-color: #e0ffe0;
+    color: #080;
+}
+
+
+.logo {
+    width: 250px;         
+    height: auto;        
+    margin-bottom: 15px; 
+    display: block;
+}
+
